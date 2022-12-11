@@ -1,23 +1,48 @@
+/* Fonts */
+
 @font-face {
-  font-family: "Poppins";
+  font-family: 'Poppins Regular';
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/Poppins-Regular.ttf");
+  src: url('../fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: 'Poppins Medium';
   font-weight: 500;
   font-style: normal;
-  src: url("../fonts/Poppins-Medium.ttf");
+  src: url('../fonts/Poppins-Medium.ttf');
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: 'Poppins SemiBold';
   font-weight: 600;
   font-style: normal;
-  src: url("../fonts/Poppins-SemiBold.ttf");
+  src: url('../fonts/Poppins-SemiBold.ttf');
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Poppins SemiBold';
+  font-size: 70px;
+  line-height: 1.06667;
+  letter-spacing: -1.5px;
+}
+
+button {
+  font-family: 'Poppins Medium';
+  font-size: 16px;
+}
+
+/* General styling */
 
 :root {
   --white: #fff;
@@ -26,9 +51,10 @@
   --gray: #a5a39a;
   --light-gray: #f5efe9;
   --dark-green: #00453b;
-  --green : #00674a;
+  --green: #00674a;
   --pink: #ffb3ee;
   --light-pink: #ffcbf0;
+  --salmon: #f4efea;
   --dark-lime: #00f086;
   --lime: #42ffc6;
   --yellow: #ffc800;
@@ -40,6 +66,14 @@
 *,
 html {
   box-sizing: border-box;
+}
+
+html {
+  background-color: var(--salmon);
+}
+
+body {
+  margin: 0;
 }
 
 .btn {
@@ -96,4 +130,95 @@ html {
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 4.125rem;
+  padding: 0 0.625rem;
+  margin: 1.25rem 0.9375rem;
+  border-radius: 50rem;
+
+  background-color: var(--white);
+}
+
+header a:first-child {
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li button {
+  border: none;
+
+  background-color: transparent;
+}
+
+header form {
+  display: none;
+}
+
+.search-form-show {
+  display: block;
+}
+
+/* Hero */
+
+main section:first-child {
+  position: relative;
+
+  height: calc(100vh - 120px);
+  max-height: 880px;
+}
+
+main section:first-child video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main section:first-child div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 80vw;
+  height: 100%;
+
+  margin: 0 auto;
+}
+
+main section:first-child div h1 {
+  max-width: 450px;
+  margin-bottom: 1.875rem;
+
+  color: var(--white);
 }
