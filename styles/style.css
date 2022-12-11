@@ -1,14 +1,99 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+
 :root {
+  --white: #fff;
   --black: #000;
   --dark-gray: #d5d0c7;
-  --dark-green: #00453b;
-  --light-gray: #f5efe9;
-  --light-pink: #ffcbf0;
   --gray: #a5a39a;
-  --green: #00f086;
-  --lime: #42ffc6;
+  --light-gray: #f5efe9;
+  --dark-green: #00453b;
+  --green : #00674a;
   --pink: #ffb3ee;
-  --white: #fff;
-  --light-yellow: #ffe966;
+  --light-pink: #ffcbf0;
+  --dark-lime: #00f086;
+  --lime: #42ffc6;
   --yellow: #ffc800;
+  --light-yellow: #ffe966;
+
+  --animation-duration: 200ms;
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+.btn {
+  position: relative;
+
+  display: flex;
+
+  width: fit-content;
+  padding: 0.8125rem 1.875rem;
+  border-radius: 1.5625rem;
+}
+
+.btn::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 100%;
+  left: 0;
+  bottom: 0;
+
+  transition: right var(--animation-duration) ease-in-out;
+}
+
+.btn:hover::before {
+  right: 0;
+}
+
+.btn.pink {
+  background-color: var(--pink);
+}
+
+.btn.pink::before {
+  background-color: var(--light-pink);
+}
+
+.btn.lime {
+  background-color: var(--dark-lime);
+}
+
+.btn.lime::before {
+  background-color: var(--lime);
+}
+
+.btn.green {
+  background-color: var(--dark-green);
+}
+
+.btn.green::before {
+  background-color: var(--green);
+}
+
+.visibly-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }

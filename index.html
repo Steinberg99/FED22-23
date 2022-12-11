@@ -2,36 +2,54 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="jouw naam" />
+    <meta name="author" content="Stein Bergervoet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Howdy FED2223</title>
+    <title>Kom naar het Spoorwegmuseum</title>
     <link href="styles/style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
 
   <body>
     <header>
-      <ul>
-        <li>
-          <button>Bezoek</button>
-        </li>
-        <li>
-          <button>Ontdek</button>
-        </li>
-        <li>
-          <button>Over</button>
-        </li>
-        <li>
-          <button>Language</button>
-        </li>
-      </ul>
-      >
-
-      <button></button>
-
       <nav>
-        <a>Tickets</a>
+        <ul>
+          <li>
+            <button>Bezoek</button>
+          </li>
+          <li>
+            <button>Ontdek</button>
+          </li>
+          <li>
+            <button>Over</button>
+          </li>
+          <li>
+            <button>Language</button>
+          </li>
+        </ul>
       </nav>
+
+      <button aria-label="Open zoekbalk">
+        <img src="" alt="" />
+      </button>
+
+      <form action="">
+        <label class="visibly-hidden" for="search">Zoeken</label>
+
+        <input type="search" name="search" id="search" placeholder="Zoeken" />
+
+        <button type="submit">
+          <img src="" alt="Zoeken" />
+          Zoeken
+        </button>
+      </form>
+
+      <button>
+        <img src="" alt="" />
+      </button>
+
+      <a class="btn lime" href="">
+        <span>Tickets</span>
+      </a>
     </header>
 
     <main>
@@ -39,21 +57,87 @@
         <div>
           <h1>Het leukste station van Nederland</h1>
 
-          <nav>
-            <a>Tickets</a>
-          </nav>
+          <a class="btn lime" href="">Tickets</a>
         </div>
 
         <div>
-          <div></div>
+          <img src="" alt="" />
 
-          <a class="btn pink" href="">
-            <span></span>
+          <p>
+            Hier vind je alles wat je moet weten voor een bezoek aan het
+            Spoorwegmuseum.
+          </p>
+
+          <a class="btn pink" href="">Bezoekersinformatie</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>
+          Het Spoorwegmuseum is niet zomaar een museum. Het is een fascinerende
+          plek waar je ontdekt hoe de trein de wereld heeft veranderd. Met een
+          levensecht station, een theater, spannende attracties en met
+          wisselende tentoonstellingen en evenementen ben je altijd op het
+          juiste spoor!
+        </h2>
+
+        <a class="btn green" href="">Ontdek ons museum</a>
+      </section>
+
+      <section>
+        <img src="./img/logo-text-large.svg" alt="">
+
+        <div>
+          <h2>Winter Station</h2>
+
+          <p>
+            Tijdens Winter Station, van 24 december 2022 t/m 8 januari 2023, brengen
+            ontelbare lampjes, kerstdecoraties en een antieke carrousel het hele
+            Spoorwegmuseum in een romantische wintersfeer. Met als absoluut hoogtepunt:
+            schaatsen tussen de treinen!
+          </p>
+
+          <a href="">
+            Winter Station 2022
+
+            <img src="" alt="">
           </a>
+        </div>
+
+        <img src="./img/img-winter-station.jpeg" alt="">
+      </section>
+
+      <section>
+        <div>
+          <h2>Ontdek het museum</h2>
+
+          <a class="btn green" href="">Ontdek ons museum</a>
+        </div>
+
+        <div>
+          <img src="./img/img-winter-station.jpeg" alt="">
+
+          <h3>Winter Station 2022</h3>
+
+          <span>24 dec 2022 t/m 8 jan 2023</span>
+        </div>
+
+        <div>
+          <img src="./img/img-hyperloop.jpg" alt="">
+
+          <h3>Hyperloop</h3>
+        </div>
+
+        <div>
+          <img src="./img/img-versteeg.jpeg" alt="">
+
+          <h3>Kinderen van Versteeg</h3>
         </div>
       </section>
     </main>
 
     <footer></footer>
   </body>
+
+  <script src="./scripts/index.js"></script>
 </html>
