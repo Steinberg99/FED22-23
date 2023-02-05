@@ -5,6 +5,11 @@
   src: url('../fonts/Poppins-Regular.ttf');
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 h1,
 h2,
 h3,
@@ -77,6 +82,10 @@ button {
   --light-yellow: #ffe966;
 
   --transition-duration: 200ms;
+
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 480px;
 }
 
 *,
@@ -334,4 +343,33 @@ footer section:last-child div nav ul li a img {
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Banner */
+
+  /* Footer */
+}
+
+@media only screen and (max-width: 767px) {
+  /* Banner */
+
+  /* Footer */
+
+  footer section:first-child h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    font-weight: 400;
+  }
+
+  footer section:first-child > div > div {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  footer section:last-child div nav ul {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
 }

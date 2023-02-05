@@ -1,7 +1,7 @@
 /* General styling */
 
 .col {
-  width: 55rem;
+  max-width: 55rem;
   margin: 0 auto;
 }
 
@@ -13,6 +13,10 @@ main section:nth-child(1) {
   height: 34.375rem;
 
   background-color: var(--yellow);
+}
+
+main section:nth-child(1) * {
+  z-index: 2;
 }
 
 main section:nth-child(1) div {
@@ -59,9 +63,10 @@ main section:nth-child(1) div div div a img {
   padding-left: 1.875rem;
 }
 
-main section:nth-child(1) img {
+main section:nth-child(1) > img {
   height: 15.625rem;
 
+  z-index: 1;
   position: absolute;
   top: 7.5rem;
   left: 80%;
@@ -167,7 +172,6 @@ main section:nth-child(4) {
 
 main section:nth-child(4) > h2 {
   width: 21.875rem;
-  margin-left: 1.875rem;
 
   flex-shrink: 0;
 }
@@ -200,4 +204,91 @@ main section:nth-child(4) > div > a {
 .opening-times-list:not(.show),
 .opening-times-text:not(.show) {
   display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* General styling */
+  .col {
+    max-width: 80vw !important;
+  }
+
+  /* Openingstijden en Toegangsprijzen */
+
+  main section:nth-child(2) div:first-child,
+  main section:nth-child(3) div:first-child {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  main section:nth-child(2) div ul,
+  main section:nth-child(3) div ul,
+  main section:nth-child(2) > p,
+  main section:nth-child(3) > div:last-child,
+  main section:nth-child(4) > * {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Openingstijden */
+
+  main section:nth-child(4) {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .col {
+    width: 87.5vw;
+  }
+
+  /* Banner */
+
+  main section:nth-child(1) div div {
+    flex-direction: column;
+  }
+
+  main section:nth-child(1) div div h1 {
+    width: 100%;
+    margin-bottom: 1.875rem;
+
+    font-size: 2.1875rem;
+  }
+
+  main section:nth-child(1) div div div p {
+    font-size: 22px;
+    line-height: 1.54545;
+  }
+
+  /* Openingstijden en Toegangsprijzen */
+
+  main section:nth-child(2) div ul,
+  main section:nth-child(3) div ul {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main section:nth-child(2) div ul li p {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+
+  main section:nth-child(2) > p {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main section:nth-child(3) > div:last-child {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Openingstijden */
+
+  main section:nth-child(4) {
+    flex-direction: column;
+  }
 }
