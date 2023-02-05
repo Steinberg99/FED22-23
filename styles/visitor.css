@@ -1,0 +1,184 @@
+/* General styling */
+
+.col {
+  width: 55rem;
+  margin: 0 auto;
+}
+
+/* Banner */
+
+main section:nth-child(1) {
+  position: relative;
+
+  height: 34.375rem;
+
+  background-color: var(--yellow);
+}
+
+main section:nth-child(1) div {
+  padding-top: 12.5rem;
+  margin-top: 0;
+}
+
+main section:nth-child(1) div div {
+  display: flex;
+  column-gap: 1.875rem;
+
+  padding-top: 0;
+}
+
+main section:nth-child(1) div div h1 {
+  width: 21.875rem;
+
+  flex-shrink: 0;
+
+  font-size: 55px;
+  line-height: 1.06;
+}
+
+main section:nth-child(1) div div div {
+  flex-direction: column;
+}
+
+main section:nth-child(1) div div div p {
+  font-size: 25px;
+  line-height: 1.6;
+
+  margin-bottom: 2.5rem;
+}
+
+main section:nth-child(1) div div div a {
+  display: flex;
+  align-items: center;
+}
+
+main section:nth-child(1) div div div a img {
+  position: static;
+
+  height: 1.875rem;
+  padding-left: 1.875rem;
+}
+
+main section:nth-child(1) img {
+  height: 15.625rem;
+
+  position: absolute;
+  top: 7.5rem;
+  left: 80%;
+}
+
+/* Openingstijden & Toegangsprijzen */
+
+main section:nth-child(2),
+main section:nth-child(3) {
+  padding-bottom: 2.5rem;
+  border-bottom: 0.125rem var(--black) solid;
+}
+
+main section:nth-child(3) div:first-child,
+main section:nth-child(2) div:first-child {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 3.75rem 0 0.625rem;
+}
+
+main section:nth-child(2) div,
+main section:nth-child(3) div {
+  display: flex;
+  justify-content: end;
+}
+
+main section:nth-child(2) div ul,
+main section:nth-child(3) div ul {
+  width: 35.75rem;
+  padding: 0;
+  margin: 0;
+}
+
+main section:nth-child(2) div ul li,
+main section:nth-child(3) div ul li {
+  display: flex;
+  justify-content: space-between;
+
+  list-style-type: none;
+}
+
+main section:nth-child(3) div ul li {
+  padding: 0.4375rem 0;
+}
+
+main section:nth-child(3) div ul li:not(:last-child) {
+  border-bottom: 0.0125rem var(--gray) solid;
+}
+
+main section:nth-child(3) div ul li:nth-child(4),
+main section:nth-child(3) div ul li:nth-child(6) {
+  display: block;
+}
+
+main section:nth-child(3) div ul li:nth-child(4) div,
+main section:nth-child(3) div ul li:nth-child(6) div {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 0;
+}
+
+main section:nth-child(3) div ul li:nth-child(4) > p,
+main section:nth-child(3) div ul li:nth-child(6) > p {
+  padding-left: 0.75rem;
+  border-left: 0.125rem var(--lime) solid;
+
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+main section:nth-child(2) div ul li p {
+  width: auto;
+  padding: 0.0625rem;
+  margin: 0;
+
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+}
+
+main section:nth-child(2) > p {
+  width: 35.75rem;
+  margin-top: 1.25rem;
+  margin-left: auto;
+}
+
+main section:nth-child(3) > div:last-child {
+  justify-content: start;
+
+  width: 35.75rem;
+  margin-top: 3.75rem;
+  margin-left: auto;
+}
+
+/* Openingstijden */
+
+main section:nth-child(4) {
+  display: flex;
+
+  padding: 3.75rem 0 7.8rem;
+}
+
+main section:nth-child(4) > h2 {
+  width: 21.875rem;
+  margin-left: 1.875rem;
+
+  flex-shrink: 0;
+}
+
+main section:nth-child(4) > div > p {
+  padding-bottom: 0.625rem;
+
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+main section:nth-child(4) > div > a {
+  margin-bottom: 1.25rem;
+}
