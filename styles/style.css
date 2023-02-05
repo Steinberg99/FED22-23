@@ -1,24 +1,8 @@
 /* Fonts */
 
 @font-face {
-  font-family: 'Poppins Regular';
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Poppins';
   src: url('../fonts/Poppins-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Poppins Medium';
-  font-weight: 500;
-  font-style: normal;
-  src: url('../fonts/Poppins-Medium.ttf');
-}
-
-@font-face {
-  font-family: 'Poppins SemiBold';
-  font-weight: 600;
-  font-style: normal;
-  src: url('../fonts/Poppins-SemiBold.ttf');
 }
 
 h1,
@@ -26,19 +10,51 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
 h1 {
-  font-family: 'Poppins SemiBold';
+  font-family: 'Poppins';
   font-size: 70px;
-  line-height: 1.06667;
+  font-weight: 600;
+  line-height: 1.0667;
   letter-spacing: -1.5px;
 }
 
+h2 {
+  font-family: 'Poppins';
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2667;
+}
+
+h3,
+h4 {
+  font-family: 'Poppins';
+}
+
+p {
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: var(--black);
+}
+
+a {
+  font-family: 'Poppins';
+  font-weight: 400;
+
+  color: var(--black);
+
+  text-decoration: none;
+}
+
 button {
-  font-family: 'Poppins Medium';
+  font-family: 'Poppins';
   font-size: 16px;
 }
 
@@ -105,6 +121,7 @@ body {
 }
 
 .btn.green {
+  color: var(--white);
   background-color: var(--dark-green);
 }
 
@@ -112,9 +129,15 @@ body {
   background-color: var(--green);
 }
 
+.col {
+  max-width: 53.125rem;
+  margin: 7.8125rem auto;
+}
+
 /* Header */
 
 header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -125,7 +148,7 @@ header {
   justify-content: flex-end;
 
   height: 4.125rem;
-  padding: 0 0.625rem;
+  padding: 0 0.375rem 0 0.625rem;
   margin: 1.25rem 0.9375rem;
   border-radius: 50rem;
 
@@ -148,6 +171,8 @@ header nav ul {
 }
 
 header nav ul li {
+  margin: 0 1.5625rem;
+
   list-style-type: none;
 }
 
@@ -157,12 +182,35 @@ header nav ul li button {
   background-color: transparent;
 }
 
-header form {
-  display: none;
+header button {
+  height: 1.5rem;
+  margin-right: 3.125rem;
+
+  padding: 0;
+
+  border: none;
+
+  background-color: transparent;
 }
 
-.search-form-show {
-  display: block;
+header button {
+  margin-right: 1.875rem;
+}
+
+header a:last-child {
+  border-radius: 50rem;
+}
+
+header a:last-child p {
+  margin-right: 1.875rem;
+
+  text-decoration: none;
+
+  color: var(--black);
+}
+
+header a:last-child img {
+  height: 1.875rem;
 }
 
 /* Hero */
@@ -172,6 +220,7 @@ main section:first-child {
 
   height: calc(100vh - 120px);
   max-height: 880px;
+  margin-bottom: 15.625rem;
 }
 
 main section:first-child video {
@@ -203,7 +252,342 @@ main section:first-child div h1 {
   color: var(--white);
 }
 
-/* General classes */
+main section:first-child div:last-child {
+  transform: translateY(-50%);
+
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 50%;
+  height: unset;
+  padding: 2.5rem;
+
+  background-color: var(--white);
+}
+
+main section:first-child div:last-child p {
+  margin-right: 1rem;
+}
+
+/* Title */
+
+main section:nth-child(2) h2 {
+  text-align: center;
+
+  margin-bottom: 3.125rem;
+}
+
+main section:nth-child(2) a {
+  margin: 0 auto;
+}
+
+/* Winter station & vuurdoop */
+
+main section:nth-child(3),
+main section:nth-child(5) {
+  overflow: visible;
+
+  max-width: 80vw !important;
+  margin-top: 15.625rem;
+}
+
+main section:nth-child(3) img {
+  transform: translateY(-7.8125rem);
+
+  z-index: -1;
+  position: absolute;
+  left: 0;
+
+  height: 25rem;
+}
+
+main section:nth-child(3) div,
+main section:nth-child(5) div {
+  display: flex;
+  align-items: center;
+
+  min-height: 36.875rem;
+}
+
+main section:nth-child(3) div img,
+main section:nth-child(5) div img {
+  transform: none;
+
+  position: static;
+
+  width: 50%;
+
+  aspect-ratio: 1 / 1;
+}
+
+main section:nth-child(3) div div,
+main section:nth-child(5) div div {
+  display: block;
+
+  width: 60%;
+  padding: 3.125rem;
+
+  background-color: var(--light-yellow);
+}
+
+main section:nth-child(5) div div {
+  background-color: var(--dark-green);
+}
+
+main section:nth-child(3) div div h2,
+main section:nth-child(5) div div h2 {
+  padding-bottom: 1.875rem;
+
+  font-size: 3.5rem;
+}
+
+main section:nth-child(5) div div h2 {
+  color: var(--pink);
+}
+
+main section:nth-child(3) div div p,
+main section:nth-child(5) div div p {
+  padding-bottom: 3.125rem;
+}
+
+main section:nth-child(5) div div p {
+  color: var(--pink);
+}
+
+main section:nth-child(3) div div a,
+main section:nth-child(5) div div a {
+  display: flex;
+}
+
+main section:nth-child(5) div div a {
+  color: var(--pink);
+}
+
+main section:nth-child(3) div div a img,
+main section:nth-child(5) div div a img {
+  z-index: 1;
+
+  width: 1rem;
+  height: auto;
+  margin-left: 0.625rem;
+}
+
+/* Slider */
+
+main section:nth-child(4) {
+  display: flex;
+
+  margin-top: 15rem;
+}
+
+main section:nth-child(4) div:first-child {
+  width: 18.125rem;
+  margin-right: 5.625rem;
+
+  flex-shrink: 0;
+}
+
+main section:nth-child(4) div:first-child h2 {
+  font-size: 3.5rem;
+  line-height: 1.06;
+
+  margin-bottom: 0.625rem;
+}
+
+main section:nth-child(4) div:last-child {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4rem;
+}
+
+main section:nth-child(4) div:last-child div {
+  width: 17.25rem;
+  margin-right: 0;
+}
+
+main section:nth-child(4) div:last-child div:last-child {
+  display: block;
+}
+
+main section:nth-child(4) div:last-child div:nth-child(2n + 1) img {
+  border-top-left-radius: 50rem;
+  border-top-right-radius: 50rem;
+}
+
+main section:nth-child(4) div:last-child div img {
+  aspect-ratio: 3 / 4;
+
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+main section:nth-child(4) div:last-child div h3 {
+  margin-bottom: 0.625rem;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.333;
+}
+
+/* Waar kan ik wat vinden? */
+
+main section:nth-child(6) {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 31rem;
+}
+
+main section:nth-child(6) div {
+  max-width: 23.75rem;
+}
+
+main section:nth-child(6) div h2 {
+  font-size: 3.5rem;
+  line-height: 1.06;
+
+  margin-bottom: 1.875rem;
+}
+
+main section:nth-child(6) div p {
+  margin-bottom: 1.875rem;
+}
+
+main section:nth-child(6) img {
+  position: absolute;
+
+  height: 31rem;
+
+  left: 50%;
+}
+
+/* Footer navigation */
+
+footer section:first-child {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+footer section:first-child img {
+  width: 12.75rem;
+  height: 6.5rem;
+  margin: 1rem 0;
+}
+
+footer section:first-child h3 {
+  margin-bottom: 4.375rem;
+
+  font-size: 3.625rem;
+  line-height: 1.24138;
+  text-align: center;
+}
+
+footer section:first-child div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 7.8125rem;
+  margin-bottom: 0;
+}
+
+footer section:first-child div div {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  padding-bottom: 0;
+}
+
+footer section:first-child div div div {
+  flex-direction: column;
+  justify-content: start;
+
+  width: fit-content;
+  padding-bottom: 0;
+}
+
+footer section:first-child div div div nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer section:first-child div div div nav ul li {
+  list-style-type: none;
+}
+
+footer section:first-child div div div h4 {
+  font-size: 1.125rem;
+  line-height: 2rem;
+
+  margin-bottom: 0.125rem;
+}
+
+footer section:first-child div div div p,
+footer section:first-child div div div a,
+footer section:first-child div div div nav ul li a {
+  font-size: 1.125rem;
+  line-height: 2rem;
+
+  color: var(--gray);
+
+  transition: color var(--transition-duration) ease-in-out;
+}
+
+footer section:first-child div div div a:hover {
+  color: var(--white);
+}
+
+address {
+  font-style: normal;
+}
+
+/* Footer sponsors */
+
+footer section:last-child {
+  background-color: var(--light-gray);
+}
+
+footer section:last-child div {
+  padding: 6.25rem 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer section:last-child div h4 {
+  margin-bottom: 3.75rem;
+
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+  text-align: center;
+}
+
+footer section:last-child div nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0;
+  margin: 0;
+}
+
+footer section:last-child div nav ul li {
+  list-style: none;
+}
+
+footer section:last-child div nav ul li a img {
+  width: 180px;
+  height: auto;
+}
+
+/* Accesability */
 
 .visibly-hidden {
   position: absolute;
