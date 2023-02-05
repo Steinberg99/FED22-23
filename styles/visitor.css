@@ -182,3 +182,22 @@ main section:nth-child(4) > div > p {
 main section:nth-child(4) > div > a {
   margin-bottom: 1.25rem;
 }
+
+/* Classes for JavaScript interaction */
+
+.toggle-price-button > img,
+.toggle-opening-times-button > img {
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.toggle-price-button.flip > img,
+.toggle-opening-times-button.flip > img {
+  transform: rotate(180deg);
+}
+
+.price-list:not(.show),
+.price-button:not(.show),
+.opening-times-list:not(.show),
+.opening-times-text:not(.show) {
+  display: none;
+}
