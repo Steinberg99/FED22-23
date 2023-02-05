@@ -60,7 +60,7 @@ button {
   --yellow: #ffc800;
   --light-yellow: #ffe966;
 
-  --animation-duration: 200ms;
+  --transition-duration: 200ms;
 }
 
 *,
@@ -84,29 +84,15 @@ body {
   width: fit-content;
   padding: 0.8125rem 1.875rem;
   border-radius: 1.5625rem;
-}
 
-.btn::before {
-  content: '';
-
-  position: absolute;
-  top: 0;
-  right: 100%;
-  left: 0;
-  bottom: 0;
-
-  transition: right var(--animation-duration) ease-in-out;
-}
-
-.btn:hover::before {
-  right: 0;
+  transition: background-color var(--transition-duration) ease-in-out;
 }
 
 .btn.pink {
   background-color: var(--pink);
 }
 
-.btn.pink::before {
+.btn.pink:hover {
   background-color: var(--light-pink);
 }
 
@@ -114,7 +100,7 @@ body {
   background-color: var(--dark-lime);
 }
 
-.btn.lime::before {
+.btn.lime:hover {
   background-color: var(--lime);
 }
 
@@ -122,14 +108,8 @@ body {
   background-color: var(--dark-green);
 }
 
-.btn.green::before {
+.btn.green:hover {
   background-color: var(--green);
-}
-
-.visibly-hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
 }
 
 /* Header */
@@ -221,4 +201,12 @@ main section:first-child div h1 {
   margin-bottom: 1.875rem;
 
   color: var(--white);
+}
+
+/* General classes */
+
+.visibly-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
