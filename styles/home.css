@@ -54,11 +54,16 @@ main section:first-child div:last-child {
   flex-direction: row;
   align-items: center;
 
-  width: 50%;
+  max-width: 37.5rem;
   height: unset;
   padding: 2.5rem;
 
   background-color: var(--white);
+}
+
+main section:first-child div:last-child img {
+  margin-right: 0.625rem;
+  margin-bottom: 3rem;
 }
 
 main section:first-child div:last-child p {
@@ -257,4 +262,34 @@ main section:nth-child(6) img {
   height: 31rem;
 
   left: 50%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* General styling */
+
+  .col {
+    max-width: 80vw !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* General styling */
+
+  .col {
+    width: 87.5vw;
+  }
+
+  /* Hero */
+
+  main section:first-child div h1 {
+    font-size: 3.125rem;
+    line-height: 1.0666;
+  }
+
+  main section:first-child div:last-child {
+    padding: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
 }
